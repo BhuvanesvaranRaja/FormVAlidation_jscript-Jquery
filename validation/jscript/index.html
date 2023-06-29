@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="./validation.js" defer></script>
+    <title>Form</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <form action="/" id="form">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 mt-5 pb-3 mb-5 bg-color box-shadow">
+            <div class="row">
+              <div class="col-12 text-center text-white text-uppercase fw-bold">
+                <h1 class="bg-primary">Registration Form</h1>
+              </div>
+              <!-- first name -->
+              <div
+                id="error"
+                class="col-12 text-danger text-center fw-bolder"
+              ></div>
+
+              <div class="col-md-4 col-12 mt-3">
+                <label for="firstname" class="form-label text-color"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  placeholder="Enter first name"
+                  name="firstname"
+                />
+                <div
+                  id="error"
+                  class="col-12 text-danger text-center fw-bolder"
+                ></div>
+              </div>
+              <!-- first name end -->
+              <!-- Middle Name name -->
+              <div class="col-md-4 col-12 mt-3">
+                <label for="middlename" class="form-label text-color"
+                  >Middle Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="middlename"
+                  name="middlename"
+                  placeholder="Enter middle Name"
+                />
+              </div>
+              <!-- first name end -->
+              <!-- last name -->
+              <div class="col-md-4 col-12 mt-3">
+                <label for="lastname" class="form-label text-color"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter last name"
+                />
+              </div>
+              <!-- last name end -->
+
+              <!-- email -->
+              <div class="col-12 mt-3">
+                <label for="email" class="form-label text-color">Email</label>
+                <input
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <!-- email end -->
+
+              <!-- password -->
+              <div class="col-md-6 col-12 mt-3">
+                <label for="password" class="form-label text-color"
+                  >Password</label
+                >
+                <input
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <div class="col-md-6 col-12 mt-3">
+                <label for="Repass" class="form-label text-color"
+                  >Confirm Password</label
+                >
+                <input
+                  class="form-control"
+                  id="Repass"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <!-- password end -->
+
+              <!-- mobile -->
+              <div class="col-12 col-md-6 mt-3">
+                <div class="row">
+                  <label for="mobile" class="form-label text-color"
+                    >Mobile</label
+                  >
+                  <div class="col-4">
+                    <select name="countryCode" class="form-select text-center">
+                      <option data-countryCode="DZ" value="213">
+                        Algeria (+213)
+                      </option>
+                      <option data-countryCode="IL" value="972">
+                        Israel (+972)
+                      </option>
+                      <option data-countryCode="IT" value="39">
+                        Italy (+39)
+                      </option>
+                      <option data-countryCode="JM" value="1876">
+                        Jamaica (+1876)
+                      </option>
+                      <option data-countryCode="JP" value="81">
+                        Japan (+81)
+                      </option>
+                      <option data-countryCode="JO" value="962">
+                        Jordan (+962)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number"
+                      name="number"
+                      placeholder="Mobile number"
+                      maxlength="10"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- mobile end -->
+
+              <!-- Gender -->
+              <div class="col-md-6 col-12 mt-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label text-color"
+                  >Gender</label
+                ><br />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label class="form-check-label text-color" for="inlineRadio1"
+                    >Male</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label class="form-check-label text-color" for="inlineRadio2"
+                    >Female</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio3"
+                    value="option3"
+                  />
+                  <label class="form-check-label text-color" for="inlineRadio3"
+                    >Other</label
+                  >
+                </div>
+              </div>
+              <!-- Gender end -->
+
+              <!-- Date fo Birth -->
+              <div class="col-md-6 col-12 mt-3">
+                <div class="row">
+                  <label
+                    for="exampleFormControlInput1"
+                    class="form-label text-color"
+                    >Date fo Birth</label
+                  >
+                  <div class="col-4">
+                    <select name="Day" class="form-select text-center">
+                      <option selected>Day</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">24</option>
+                      <option value="29">25</option>
+                      <option value="30">26</option>
+                      <option value="31">27</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <select name="month" class="form-control text-center">
+                      <option selected>Month</option>
+                      <option value="January">January</option>
+                      <option value="February">February</option>
+                      <option value="March">March</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <select name="Year" class="form-control">
+                      <option selected>Year</option>
+                      <option value="2001">2001</option>
+                      <option value="2002">2002</option>
+                      <option value="2003">2003</option>
+                      <option value="2004">2004</option>
+                      <option value="2005">2005</option>
+                      <option value="2006">2006</option>
+                      <option value="2007">2007</option>
+                      <option value="2008">2008</option>
+                      <option value="2009">2009</option>
+                      <option value="2010">2010</option>
+                      <option value="2011">2011</option>
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Date fo Birth -->
+
+              <!-- Birth place -->
+              <div class="col-md-6 col-12 mt-3">
+                <label for="Birthplace" class="form-label text-color"
+                  >Birth place</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name="birthplace"
+                  id="birthplace"
+                  placeholder="Birth place"
+                />
+              </div>
+              <!-- Birth place end -->
+
+              <!-- address -->
+              <div class="col-12 mt-3">
+                <label for="address" class="form-label text-color"
+                  >Address</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Address"
+                />
+              </div>
+              <div class="col-md-6 col-12 mt-3">
+                <label for="city" class="form-label text-color">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="city"
+                  id="city"
+                  placeholder="Enter your City"
+                />
+              </div>
+
+              <div class="col-12 col-md-6 mt-3">
+                <label for="state" class="form-label text-color"
+                  >State / Province</label
+                >
+                <select name="state" id="state" class="form-control">
+                  <option value=""></option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Andaman and Nicobar Islands">
+                    Andaman and Nicobar Islands
+                  </option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <label for="postal" class="form-label text-color"
+                  >Postal / Zip code</label
+                >
+                <input type="text" class="form-control" id="postal" />
+              </div>
+              <div class="col-12 col-md-6 mt-3">
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label text-color"
+                  >country</label
+                >
+                <select id="country" name="country" class="form-select">
+                  <option value="Afganistan">Afghanistan</option>
+                  <option value="Wake Island">Wake Island</option>
+                  <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                  <option value="Yemen">Yemen</option>
+                  <option value="Zaire">Zaire</option>
+                  <option value="Zambia">Zambia</option>
+                  <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+              </div>
+              <!-- address end -->
+              <!-- check box -->
+              <div class="form-check col-6 mt-3">
+                <label class="form-check-label text-color" for="exampleCheck1"
+                  >Resume</label
+                >
+                <input type="file" class="form-control" id="exampleCheck1" />
+              </div>
+              <div class="form-check col-6 mt-3">
+                <label class="form-check-label text-color" for="exampleCheck1"
+                  >Adhar card</label
+                >
+                <input type="file" class="form-control" id="exampleCheck1" />
+              </div>
+
+              <!-- check box end -->
+              <!-- button -->
+              <div class="col-6 text-center mt-5">
+                <button type="submit" class="btn btn-success">
+                  <span class="btn-text fs-5">Submit</span>
+                </button>
+              </div>
+              <div class="col-6 text-center mt-5">
+                <button type="reset" class="btn btn-danger">
+                  <span class="btn-text fs-5">Reset</span>
+                </button>
+              </div>
+              <!-- button end -->
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
